@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+       
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>競技プログラミングの思い出1/過渡解しすてむ</title>
+        <link rel="stylesheet" href="../../test.css">
+        <script type="text/javascript" src="fizzbuzz/fizzbuzz.js"></script>
+    </head>
+
+    <body>
+
+        <main>
+
+            <p><iframe class="leftmenu" src="../../leftmenu.html"></iframe></p>
+
+            <p><iframe class="submenu" src="../kyopro_submenu.html" name="sub"></iframe></p>
+            
+            <h3><a href="https://beta.atcoder.jp/contests/abc114/tasks" target="_blank">ABC114</a></h3>
+
+            <p>Dを解いている人が結構多かった。Bは文字列から何回か数字を生成しなおしたけどvectorでよかったかなあ?<br>
+                Cは値4つのbitをつかっていくらか生成したあと判定、OKならresult++。最初から条件に合うものを生成するか判定で削るかって難しいなあ(´・ω・｀)<br>
+                Dは素因数分解までわかったけど3*5*5を少ないと判定できなかったのが敗因です。
+                つらいネ。
+            </p>
+            <hr/>
+            <h3><a href="https://beta.atcoder.jp/contests/abc115/tasks" target="_blank">ABC115</a></h3>
+
+            <p>今回むっちゃ全完のひと多かったっすね...（´・ω・`）<br>
+                Aはforで解いたけど、あの数ならif分岐のほうがはやいかもなあ...?<br>
+                Bはまあソートしたらいいかなって感じで解きました。入力のときにMAXをとっといてそれをひくほうがよかったかしら。<br>
+                Cはソートが想定っぽいかな。入力がとっても多かったからscanfつかうと速度が結構変わるみたい。<br>
+                Dはハンバーガーの構造を4くらいまで書いてたら気づけました。今回はたまたまうまく行ったけど、
+                漸化式から一般解を求める癖をつけなきゃなあ(案件によっては証明もしっかりすべきでは...)と思いました。<br>
+                <input type="button" value="くやしく"
+                    onclick="document.getElementById('humburger').style.display = 'inline';">
+                
+                <div class = "hidden" id = "humburger">
+                    <input type="button" value="もういい"
+                    onclick="document.getElementById('humburger').style.display = 'none';">
+                    <br>
+                    <hr>
+                    |<br>
+                    0|||0<br>
+                    00|||0|0|||00<br>
+                    ...と、左右対称になってたり、2^nがキーとなってるってのに気づけば数列よくわからんでもぼくみたく無理やりいけるかなと。<br>
+                    考え方としては、バーガー全体の真ん中よりルンルンが食べてるか、その半分より上(下)の半分と比べてどうか...とやって、<br>
+                    食べた数と一致するまで考えました。<br>
+                    もし矢印のとこよりxが大きいなら、ひとまずそこまで食べたことにして矢印を上に動かして継続、小さいならそのまま下に...みたいな(説明下手くそ)<br>
+
+                    <br>
+                    ====x========  ハンバーガーくん<br>
+                    ======p======  上下判定機くん<br>
+                    x＜p、そのままpを左に   <br>
+                    ====x========  ハンバーガーくん<br>
+                    ===p=========  上下判定機くん<br>
+                    p＜x、結果にいくらか加算、pを右に   <br> 
+                    ====x========  ハンバーガーくん<br>
+                    ====p========  上下判定機くん<br> 
+                    x=より結果を加算したのち終了<br>
+
+                    <br>
+                    ここまで<br>
+                    <hr>
+                    <br>
+                    結果的には、ハンバーガーを層ごとに分解してる感じになる...のかなあ...(クソコード実装者故人の感想)<br>
+                    他の人は結構再帰で解いてます。そっちのやり方も勉強しないとな。<br>
+                </div>
+                しっかしわりかしギリッギリだったなあ...(レートが茶に戻りそうでめっちゃビビってた)<br>
+                つらいネ。
+
+            </p>
+            <hr/>
+            <h3><a href="https://codeforces.com/contest/1081" target="_blank">Avito Cool Challenge 2018(こーどふぉーしず)</a></h3>
+            <p>英語読めない(直球)</p><p>(pretest時点)</p><p>A...(n-1)%nについて考えると2以外は...?ってことかな</p>
+            <p>C...<a href="https://qiita.com/drken/items/3b4fdf0a78e7a138cd9a" target="_blank">これですよね</a><br>
+                1.左端を何色にする?(m)<br>
+                2.境目はどこにする?(nCk)<br>
+                3.境目の右の色は何にする?(m-1)<br>
+                でおしまい...?
+            </p>
+            <p>(追記)通ってました!(初心者向けのとこの)全体の真ん中くらいでした。英語読めるようにならんとむりやなあってのもあるけどやっぱ知識足りねえなって...
+            </p>
+            <hr>
+            <h3><a href="https://codeforces.com/contest/1092" target="_blank">Codeforces Round #527 (Div. 3)</a></h3>
+            <p>英語読めない(直球)(デジャヴュ)</p><p>A...それぞれの文字を均等に出力。割り算(´^ω^`)</p>
+            <p>B...ソートしたら２つごとに揃えていきましょう</p>
+            <p>ところでいつまでたってもチュートリアルでないしレートも動かないんだけど...</p>
+            <p>追記、下がりました(◞‸◟)つらいネ。</p>
+
+            <hr/>
+            <h3><a href="https://atcoder.jp/contests/agc030//tasks" target="_blank">AGC030</a></h3>
+            <p>
+                さて、今回はAしか解けませんでした。Bの部分点取りたかったんだけどなあ...<br>
+                Aは限界まで美味しいクッキーをたべることを考えていきます。<br>
+                解毒剤クッキーはいくらでも食べられる、つまり解毒の美味しいクッキーは確実に全てたべることができます。
+                すべきことは「美味しい毒入りクッキーをできるだけたくさんたべたい！」ということになりますね。
+                解毒＞＝毒なら毒→解毒→毒...とたべたあと、のこった解毒の美味しいクッキーを食べてしまえばいいのはすぐわかります。
+                では解毒＜毒ではどうでしょうか。毒入りクッキーを食べることができるのは解毒クッキーの数...だけではありません！(さいしょは気づきませんでしたが...)
+                じつは最後に毒クッキーを食べて終了することができます。つまり毒クッキーは解毒クッキーの数+1となりますね。
+                これら２つを、しなない条件としてmin()のなかに2つを入れればACです。
+                (しかし美味しいからって毒が入っているとわかっているクッキーを何故食べてしまうんですかね...)
+            </p>
+            <hr/>
+            <h3><a href="https://atcoder.jp/contests/abc116/tasks" target="_blank">ABC116</a></h3>
+            <p>
+                はい。Cまでしか解けませんでした。<br>
+                A:まあ直角だしねぇ(´^ω^`)<br>
+                B:コラッツの問題の応用っすかねぇ...範囲保証があるのでシミュレートしていけば解けます。setつかうと楽だと思うぜ。<br>
+                C:逆に目標の高さになっている花を逆再生して縮めてゆくように考えると楽です。<br>
+                花の目的の高さの合計と差分を保存していき、+と-の間で処理をしていきます。...説明が下手だね。<br>
+                <input type="button" value="くやしく"
+                    onclick="document.getElementById('hana').style.display = 'inline';">
+                
+                <div class = "hidden" id = "hana">
+                    <input type="button" value="もういい"
+                    onclick="document.getElementById('hana').style.display = 'none';">
+                    <br>
+                    <hr>
+                    <br>
+                    4 23 75 0 23 96 50 100<br>
+                    について差分をとっていくと、<br>
+                    4 19 52 -75 23 73 -46 50 -100(最後の値を打ち消すのがポイント！これを忘れてて結構時間食った...)<br>
+                    はじめに保存した目的の高さの合計から(幅*縮めた数)をひいて、合計、つまり残っている花の高さを0にしたらおしまいです。では縮めていきましょう。<br>
+                    ここで正負が変わっている場所を見るのです。例えば、見ていくと52、-75となっているところは、もとの配列を見ると山となります。<br>
+                    そこをくずして(正と負を同じだけ0に近づける...absのminだけ縮めますって言えばいいのかなあ)、<br>
+                    4 19 0 -23 23 73 -46 50 -100となります。(合計から52*2引く)<br>
+                    つぎは<br>
+                    4 0 0 -4 23 73 -46 50 -100 (19*3)<br>
+                    とか<br>
+                    0 0 0 0 23 73 -46 50 -100 (4*4)<br>
+                    とか<br>
+                    0 0 0 0 23 27 0 50 -100 (46*2)<br>
+                    と打ち消していきます。<br>
+                    <br>
+                    このように潰していけばテストケース2msで通すことができました。
+                    <br><br>
+                    ここまで<br>
+                    <hr>
+                    <br>
+                    
+                    <br>
+                </div>
+            </p>
+
+            <hr/>
+            <h3><a href=https://codeforces.com/contest/1115 target="_blank">2019Q#warmup</a></h3>
+            <p>
+                
+
+                <div style="width: 65%">
+                <script async class="speakerdeck-embed" data-id="6c7c16dbd826463399ddca971983f368" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+                </div>
+                埋め込みテストもかねて
+
+                これに参加したやつです 
+                https://codeforces.com/contest/1115
+                <br>
+                Q#環境のDLはこちら 
+                https://www.microsoft.com/en-us/quantum/development-kit
+            
+            </p>
+            <hr/>
+            <h3><a href=https://atcoder.jp/contests/abc120/tasks target="_blank">ABC120</a></h3>
+            <p>
+                読み込みにちょっとじかんがかかるかも
+                ごめんね．
+                <br>
+                <embed src="abc120.pdf" width="620" height="800" 
+                type='application/pdf'>
+            
+            </p>
+        </main>
+
+</body>
+</html>
