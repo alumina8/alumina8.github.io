@@ -4,13 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | block</title>
-
-  </head>
-  <body>
-    <main>
-      <p><iframe class="leftmenu" src="../../leftmenu.html"></iframe></p>
-
-      <p><iframe class="submenu" src="../unity_submenu.html" name="sub"></iframe></p>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="../../test.css">
     <script src="TemplateData/UnityProgress.js"></script>  
@@ -18,6 +11,8 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/block.json", {onProgress: UnityProgress});
     </script>
+  </head>
+  <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -26,6 +21,5 @@
         <div class="title">block</div>
       </div>
     </div>
-  </main>
-</body>
+  </body>
 </html>
