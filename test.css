@@ -5,6 +5,12 @@
 	width:100%;
 	height:auto;
 }
+textarea {
+	width: 300px;
+	height: 7em;
+	line-height: 1.5em;
+	}
+	
 
 .atamay{
 	width:300px;

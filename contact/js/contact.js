@@ -1,7 +1,7 @@
 window.contact = window.contact || {};
 
 window.contact.checkValidation = function(){
-    if(!$('input[id="name"]').val() || !$('input[id="email"]').val() || !$('textarea[id="message"]').val()){
+    if(!$('textarea[id="name"]').val()  || !$('textarea[id="message"]').val()){
         $('input[id=submit]').attr('disabled', 'disabled');
         return false;
     }
@@ -11,8 +11,8 @@ window.contact.checkValidation = function(){
 }
 
 window.contact.send = function(){
-    var name = $('input[id="name"]').val() 
-    var email = $('input[id="email"]').val() 
+    var name = $('textarea[id="name"]').val() 
+    var email = $('textarea[id="email"]').val() 
     var message = $('textarea[id="message"]').val()
     data = {
         name: name,
