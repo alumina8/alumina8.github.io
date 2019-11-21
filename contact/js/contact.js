@@ -38,6 +38,6 @@ window.contact.ajax = function(data){
     }).fail(function(){
         alert('送信失敗'); 
     }).always(function(){
-        location.href="../index.html";
+        location.href="./contact.html";
     })
 }
