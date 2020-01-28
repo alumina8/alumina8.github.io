@@ -28,17 +28,17 @@ textarea {
     top:0;
     left:0px;
     width:20%;
-	height:40%;
+	height:50%;
 
 
 }
 
 .submenu{
 	position:fixed;
-    top:40%;
+    top:50%;
     left:0px;
     width:20%;
-    height:60%;
+    height:50%;
 }
 body {background-color: #dfdfdf;
 
