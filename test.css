@@ -79,3 +79,13 @@ table td {
 }
 
 .hidden { display: none; }   /* 非表示 */
+
+@font-face {
+	font-family: 'naraku_moji';
+	src: url(FONT/Naraku_moji.ttf);
+}
+
+
+.naraku{
+	font-family: naraku_moji;
+}
