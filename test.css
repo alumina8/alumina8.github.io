@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (max-width: 960px) { 
+@media screen and (max-width: 959px) { 
  
 .furane{
 	margin: 0;
@@ -91,9 +91,9 @@ table td {
 	font-family: naraku_moji;
 }
 .chart{
-	margin-left:18%;
-	margin-right:18%;
-	font-size: 120%;
+	margin-left:5%;
+	margin-right:5%;
+	font-size: 60%;
 }
 }
 
@@ -189,6 +189,8 @@ table td {
 		font-family: naraku_moji;
 	}
 	.chart{
-		
+		margin-left:18%;
+		margin-right:18%;
+		font-size: 120%;
 	}
-}
+	}
