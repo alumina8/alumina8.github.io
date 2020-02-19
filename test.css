@@ -89,3 +89,8 @@ table td {
 .naraku{
 	font-family: naraku_moji;
 }
+.chart{
+	margin-left:18%;
+	margin-right:18%;
+	font-size: 120%;
+}
